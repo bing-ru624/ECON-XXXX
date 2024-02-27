@@ -1,0 +1,35 @@
+---
+title: "HelloWorld"
+author: "Ben Hsieh"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    includes:
+        keep_tex: yes
+    latex_engine: xelatex
+header-includes:
+  \usepackage{fvextra}
+  \usepackage{xeCJK}
+  \setCJKmainfont{Songti TC}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE, include=FALSE}
+library(showtext)
+# 新增中文字體
+font_install(source_han_serif(lang = "TW"))
+showtext_auto(enable=TRUE)
+```
+
+# Hello World
+
+# 你好世界
+
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
